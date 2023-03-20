@@ -1,0 +1,171 @@
+/* fonts imported */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+/* css variables */
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-Magenta: hsl(300, 69%, 71%);
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
+/* general settings */
+
+*::before,
+*::after,
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+/* Layout styling */
+
+body {
+    max-height: 100vh;
+    font-family: var(--body-font);
+    font-size: 15px;
+    text-align: center;
+    background: url(images/bg-mobile.svg) var(--violet);
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: whitesmoke;
+}
+
+.wrapper {
+    margin: 20px 20px 0;
+}
+
+header {
+    margin-bottom: 2.8125rem;
+    text-align: left;
+}
+
+.logo-huddle {
+    width: 7.5rem;
+    object-fit: cover;
+}
+
+
+.illustration {
+    margin-bottom: 2.8125rem;
+}
+
+.illustration img {
+    width: 100%;
+}
+
+
+h1,
+p {
+    margin-bottom: 1.125rem;
+}
+
+.cta {
+    display: inline-block;
+    background-color: whitesmoke;
+    color: var(--violet);
+    padding: 0.625rem 2.8125rem;
+    border-radius: 1.5625rem;
+}
+
+footer {
+    margin-top: 2.8125rem;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1.125rem;
+}
+
+.social-link {
+    display: flex;
+    gap: 0.625rem;
+    justify-content: center;
+}
+
+ion-icon {
+    color: whitesmoke;
+    border: 0.1875rem solid whitesmoke;
+    padding: 0.25rem;
+    border-radius: 50%;
+}
+
+
+/* typography styling */
+
+h1 {
+    font-size: 1.5625rem;
+}
+
+.content p {
+    font-size: 0.875rem;
+}
+
+
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(69, 68%, 96%);
+    text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 18px;
+        background: url(images/bg-desktop.svg) var(--violet);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .wrapper {
+        margin: 30px;
+    }
+
+
+    .flex {
+        display: flex;
+        gap: 25px;
+    }
+
+    .illustration,
+    .content {
+        flex: 1;
+    }
+
+    .illustration {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        text-align: left;
+        padding-top: 45px ;
+    }
+
+    h1 {
+        font-size: 36px;
+        width: 60%;
+    }
+
+    .content p {
+        width: 80%;
+        font-size: 18px;
+    }
+
+    .social-link {
+        align-self: flex-end;
+    }
+}
